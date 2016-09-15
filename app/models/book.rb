@@ -2,6 +2,8 @@ class Book < ApplicationRecord
   belongs_to :publisher, required: false
   belongs_to :author
 
+  mount_base64_uploader :cover, CoverUploader
+
   validates :title, presence: true
   validates :released_on, presence: true
   validates :author, presence: true
