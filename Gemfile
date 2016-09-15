@@ -7,11 +7,13 @@ gem 'carrierwave-base64'
 group :development, :test do
   gem 'pry-rails'
   gem 'pry'
-  gem 'rspec-rails'
+  gem 'rspec-rails', require: false
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'webmock'
   gem 'shoulda-matchers'
+  gem 'simplecov'
+  gem 'simplecov-json'
 end
 
 group :development do

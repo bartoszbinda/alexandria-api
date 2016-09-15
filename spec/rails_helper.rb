@@ -1,5 +1,7 @@
 # spec/rails_helper.rb
 ENV['RAILS_ENV'] ||= 'test'
+require 'simplecov'
+require 'simplecov-json'
 require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 # Require RSpec for Rails, webmock and database_cleaner
@@ -28,6 +30,11 @@ RSpec.configure do |config|
     end
   end
 end
+SimpleCov.formatters = [
+  SimpleCov::Formatter::HTMLFormatter,
+  SimpleCov::Formatter::JSONFormatter,
+]
+SimpleCov.start
 # Configure Shoulda-Matchers
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
