@@ -4,7 +4,6 @@ RSpec.describe 'Books', type: :request do
 	let(:ruby_microscope) { create(:ruby_microscope) }
 	let(:rails_tutorial) { create(:ruby_on_rails_tutorial) }
 	let(:books) { [ ruby_microscope, rails_tutorial ] }
-	let(:json_body) { JSON.parse(response.body) }
 	describe 'GET /api/books' do
 		before { books }
 		context 'default behaviour' do
