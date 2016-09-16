@@ -32,7 +32,7 @@ RSpec.configure do |config|
 end
 SimpleCov.formatters = [
   SimpleCov::Formatter::HTMLFormatter,
-  SimpleCov::Formatter::JSONFormatter,
+  SimpleCov::Formatter::JSONFormatter
 ]
 SimpleCov.start
 # Configure Shoulda-Matchers
