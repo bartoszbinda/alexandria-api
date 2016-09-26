@@ -10,7 +10,7 @@ FactoryGirl.define do
     author
   end
   factory :ruby_on_rails_tutorial, class: Book do
-    title 'Ruby on Rails tutorial'
+    title 'Ruby on Rails Tutorial'
     subtitle 'Hehehe'
     isbn_10 '1234567897'
     isbn_13 '0987654321124'

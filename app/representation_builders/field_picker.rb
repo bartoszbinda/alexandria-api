@@ -7,22 +7,22 @@ class FieldPicker
   def pick
     # Return presenter with updated data
     (validate_fields || pickable).each do |field|
-		value = (@presenter.respond_to?(field) ? @presenter :
-		@presenter.object).send(field)
-		@presenter.data[field] = value
-	end
-	@presenter
+      value = (@presenter.respond_to?(field) ? @presenter :
+      @presenter.object).send(field)
+      @presenter.data[field] = value
+    end
+    @presenter
   end
 
   private
 
   def validate_fields
-  	return nil if @fields.blank?
-	validated = @fields.split(',').reject { |f| !pickable.include?(f) }
-	validated.any? ? validated : nil
+    return nil if @fields.blank?
+    validated = @fields.split(',').reject { |f| !pickable.include?(f) }
+    validated.any? ? validated : nil
   end
 
   def pickable
-  	@pickable ||= @presenter.class.build_attributes
+    @pickable ||= @presenter.class.build_attributes
   end
 end

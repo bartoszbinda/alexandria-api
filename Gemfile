@@ -7,7 +7,6 @@ gem 'carrierwave'
 gem 'carrierwave-base64'
 gem 'kaminari'
 
-
 group :development, :test do
   gem 'pry-rails'
   gem 'pry'
