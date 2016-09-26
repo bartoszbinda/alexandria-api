@@ -1,5 +1,4 @@
 # encoding: utf-8
-
 class CoverUploader < CarrierWave::Uploader::Base
   storage :file
   def default_url
